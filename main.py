@@ -1,30 +1,19 @@
 from selenium import webdriver
-import os
-
 from selenium.webdriver.common.by import By
 
-# os.environ['PATH'] += r"C:\Program Files (x86)\edgedriver_win64\msedgedriver.exe"
+driver =  webdriver.Chrome()
 
-driver = webdriver.Firefox()
+url = "https://blsitalypakistan.com/account/login"
 
-username = "standard_user"
-userpassword  = "secret_sauce"
-url = "https://www.saucedemo.com/"
-
+username = "guestuse3309@gmail.com"
+password = "khan98765"
 driver.get(url)
 
-username_field = driver.find_element(By.ID, value='user-name')
-password_field = driver.find_element(By.ID, value='password')
+user_field = driver.findElement(By.xpath("//input[@placeholder='Enter Email']"))
+password_field = driver.findElement(By.xpath("//input[@placeholder='Enter Password']"))
 
-login_button = driver.find_element(By.ID, value='login-button')
+captcha = driver.findElement(By.className("vsc-initialized"))
 
-assert not login_button.get_attribute("disabled")
+login_button = driver.findElement(By.name("submitLogin"))
+login_button
 
-username_field.send_keys(username)
-password_field.send_keys(userpassword)
-
-login_button.click()
-
-
-success_element = driver.find_element(By.CSS_SELECTOR, value='.title')
-assert success_element.text == 'Products'
