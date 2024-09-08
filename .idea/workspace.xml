@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2cfff59-163d-49f5-9b85-95e62fed9d0a" name="Changes" comment="low its clicking on recaptcha box">
+    <list default="true" id="b2cfff59-163d-49f5-9b85-95e62fed9d0a" name="Changes" comment="Now its clicking on checkbox but not buster button">
+      <change afterPath="$PROJECT_DIR$/recaptcha_bypass.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -12,6 +13,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -34,8 +42,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.main.executor": "Run",
+    "Python.recaptcha_bypass.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true"
   }
 }]]></component>
   <component name="RunManager">
@@ -118,7 +128,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725778129640</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Now its clicking on checkbox but not buster button">
+      <option name="closed" value="true" />
+      <created>1725780096917</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1725780096917</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -137,6 +155,7 @@
     <MESSAGE value="logged in into saucedemo site succefully" />
     <MESSAGE value="working on BLS site" />
     <MESSAGE value="low its clicking on recaptcha box" />
-    <option name="LAST_COMMIT_MESSAGE" value="low its clicking on recaptcha box" />
+    <MESSAGE value="Now its clicking on checkbox but not buster button" />
+    <option name="LAST_COMMIT_MESSAGE" value="Now its clicking on checkbox but not buster button" />
   </component>
 </project>
