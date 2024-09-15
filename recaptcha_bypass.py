@@ -5,6 +5,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
+# GOOGLE RECAPTCHA BYYPASSER
+
 # Path to the .crx file for the Buster extension
 crx_path = r"C:\Users\Haider Computer\Desktop\SeleniumTraining\Buster.crx"
 selectorhub_path = r'C:\Users\Haider Computer\Desktop\SeleniumTraining\SelectorsHub.crx'
@@ -54,7 +56,7 @@ except Exception as e:
     driver.quit()
 
 # Wait for Buster to solve the CAPTCHA (this might take a while)
-time.sleep(10)  # Adjust the sleep time if needed
+# time.sleep(10)  # Adjust the sleep time if needed
 
 # Switch back to the reCAPTCHA iframe to check if the CAPTCHA is solved
 driver.switch_to.default_content()
@@ -67,7 +69,7 @@ checkbox = driver.find_element(By.ID, 'recaptcha-anchor')
 # Polling loop to wait for CAPTCHA to be solved
 captcha_solved = False
 while not captcha_solved:
-    time.sleep(1)
+  #  time.sleep(1)
     captcha_solved = checkbox.get_attribute('aria-checked') == 'true'
     print("Waiting for CAPTCHA to be solved...")
 
