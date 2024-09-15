@@ -5,6 +5,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
+# from main import buster_button
+
 # GOOGLE RECAPTCHA BYYPASSER
 
 # Path to the .crx file for the Buster extension
@@ -45,12 +47,19 @@ challenge_iframe = WebDriverWait(driver, 10).until(
 driver.switch_to.frame(challenge_iframe)
 
 # Pause to ensure the page is fully loaded
-time.sleep(2)
+# time.sleep(2)
 
 # Try finding the Buster button again
 try:
-    buster_button = driver.find_element(By.XPATH, '//*[@id="rc-imageselect"]/div[3]/div[2]/div[1]/div[1]/div[4]')
+    buster_button = WebDriverWait(driver,5).until(
+        EC.presence_of_element_located(
+            (By.XPATH, '//*[@id="rc-imageselect"]/div[3]/div[2]/div[1]/div[1]/div[4]')
+        )
+    )
     buster_button.click()
+
+#    buster_button = driver.find_element(By.XPATH, '//*[@id="rc-imageselect"]/div[3]/div[2]/div[1]/div[1]/div[4]')
+#    buster_button.click()
 except Exception as e:
     print(f"Error finding Buster button: {e}")
     driver.quit()
